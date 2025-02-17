@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de commande</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="traitement_commande.php" method="POST">
+        <h2>Passer une commande</h2>
+
+        <label for="nom">Nom complet :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="adresse">Adresse de livraison :</label>
+        <textarea id="adresse" name="adresse" required></textarea>
+
+        <label for="telephone">Numéro de téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" required>
+
+        <label for="produit">Produit :</label>
+        <select id="produit" name="produit">
+            <option value="tshirt">bag</option>
+            <option value="jean">Jean</option>
+            <option value="chaussures">ensemble homme</option>
+            <option value="sac">Jwelery</option>
+        </select>
+
+        <label for="quantite">Quantité :</label>
+        <input type="number" id="quantite" name="quantite" min="1" required>
+
+        <button type="submit">Commander</button>
+    </form>
+
+</body>
+</html>
